@@ -13,16 +13,6 @@ spec:
       labels:
         app: nifi
     spec:
-      affinity:
-        podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-                matchExpressions:
-                  - key: "app"
-                    operator: In
-                    values:
-                    - nifi
-              topologyKey: "kubernetes.io/hostname"
       containers:
         - name: nifi
           command: ["/bin/sh","-c"]
