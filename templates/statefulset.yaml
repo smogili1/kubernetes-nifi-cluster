@@ -27,7 +27,7 @@ spec:
           env:
             - name: ZK_NODES_LIST
               # Requires zookeeper running
-              value: "zk-0.zk-hs.zk.svc.cluster.local"
+              value: "zk-0.zk-hs.zk.svc.cluster.local,zk-1.zk-hs.zk.svc.cluster.local,zk-2.zk-hs.zk.svc.cluster.local"
             - name: ZK_MONITOR_PORT
               value: "2888"
             - name: IS_CLUSTER_NODE
