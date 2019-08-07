@@ -24,12 +24,13 @@ spec:
             - containerPort: 8081
             - containerPort: 8443
             - containerPort: 2882
+            - containerPort: 2181
           env:
             - name: ZK_NODES_LIST
               # Requires zookeeper running
-              value: "zk-0.zk-hs.zk.svc.cluster.local,zk-1.zk-hs.zk.svc.cluster.local,zk-2.zk-hs.zk.svc.cluster.local"
-            - name: ZK_MONITOR_PORT
-              value: "2888"
+              value: "nifi-0.nifi.nifi.svc.cluster.local,nifi-1.nifi.nifi.svc.cluster.local,nifi-2.nifi.nifi.svc.cluster.local"
+            - name: ZK_CLIENT_PORT
+              value: 2181
             - name: IS_CLUSTER_NODE
               value: "yes"
             - name: BANNER_TEXT
